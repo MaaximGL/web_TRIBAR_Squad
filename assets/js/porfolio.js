@@ -9,20 +9,20 @@ const mobileAndTabletCheck = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IE
 $(document).ready(() => {
   const links = [
     {
+      name: 'Instagram',
+      link: 'https://www.instagram.com/MaaximGL/',
+    },
+    {
+      name: 'Facebook',
+      link: 'https://www.facebook.com/maaximgl/',
+    },
+    {
       name: 'Steam',
-      link: 'https://steamcommunity.com/id/Max_GL/',
+      link: 'https://steamcommunity.com/id/MaaximGL/',
     },
     {
-      name: 'Discord',
-      link: 'https://discord.gg/PbqDrantsN',
-    },
-    {
-      name: 'VK',
-      link: 'https://vk.com/maxim_reiter',
-    },
-    {
-      name: 'Send Mail',
-      link: 'mailto:hyperconceptx@gmail.com',
+      name: 'Github',
+      link: 'https://github.com/MaaximGL',
     },
   ];
 
@@ -43,7 +43,7 @@ $(document).ready(() => {
   }
 
   app.titleChanger(['I SEE YOU', 'What are you doing here?']);
-  app.iconChanger(['/assets/icons/ti/f1.jpg', '/assets/icons/ti/f2.jpg']);
+  app.iconChanger(['assets/icons/ti/f1.jpg', 'assets/icons/ti/f2.jpg']);
 });
 
 if ($.cookie('videoTime')) {
@@ -78,7 +78,8 @@ $('html').on('contextmenu', (event) => {
   img.width = 64;
   img.height = 64;
   img.alt = 'SUCK';
-  img.style = `position: absolute; left: ${event.pageX}px; top: ${event.pageY}px; z-index: 10;`;
+  img.style = `position: absolute; left: ${event.pageX}px; top: ${event.pageY}px; z-index: 1000; mix-blend-mode: difference;
+  filter: invert(1);`;
   img.className = `troll ${trollfaceLight}`;
 
   document.body.appendChild(img);
@@ -109,8 +110,6 @@ const writeLine = (text, speed, timeout, callback) => {
 
   const lineNumber = app.id !== 3 ? ++app.id : (app.id += 2);
 
-  // console.log (lineNumber);
-
   setTimeout(() => {
     const typed = new Typed(`#line${lineNumber}`, {
       strings: text,
@@ -126,7 +125,7 @@ $.getJSON(ipgeolocation, (data) => {
 
     clearCursor();
 
-     writeLine([`И да.. Я буду дальше писать на английском. Так что.. `], 30, () => {
+     writeLine([`И да.. Я буду дальше писать на английском. Так что.. Shut the fuck up!`], 30, () => {
      if (app.skippedIntro) return;
 
      clearCursor();
@@ -144,7 +143,7 @@ $.getJSON(ipgeolocation, (data) => {
       
       clearCursor();
 
-        writeLine([`<i style='color: #F62459'>Young $$$</i>`], 120, 500, () => {
+        writeLine([`<i style='color: #F62459'>GL $$$</i>`], 120, 500, () => {
           timeouts.push(
           setTimeout(() => {
             if (app.skippedIntro) return;
@@ -177,8 +176,8 @@ const skipIntro = () => {
     $('.main-intro').remove();
 
     $('#marquee').marquee({
-      duration: 3500,
-      gap: 320,
+      duration: 7500,
+      gap: 220,
       delayBeforeStart: 1000,
       direction: 'left',
       duplicated: true,
@@ -222,6 +221,8 @@ const skipIntro = () => {
       $('.background').fadeIn(100, () => {
         if (!app.shouldIgnoreVideo) $('#audio').animate({ volume: app.musicVolume }, app.musicFadeIn);
       });
+
+      $('.Intro').addClass('hidden')
     }, 200);
   });
 };

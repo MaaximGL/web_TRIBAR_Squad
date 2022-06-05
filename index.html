@@ -50,15 +50,15 @@
     <!-- ===== Main Container Start ===== -->
     <div class="main-contaner">
         <!-- ===== Main Content Start ===== -->
-        <div class="main-content" style="display: none;">
+        <div class="main-content">
             <!-- ===== Home section Start ===== -->
-            <sectin class="home section">
+            <section class="home section">
                 <div class="container">
                     <div class="home-row">
                         <div class="home-info padd-15">
                             <div target="_BLANK" class="Names">
-                                <div class="name">Maxim</div>
-                                <div class="surname">Dead Inside</div>
+                                <div class="name">Tribar</div>
+                                <div class="surname">Sq. Inside</div>
                             </div>
                             <p><span id="brand"></span></p>
                         </div>
@@ -66,9 +66,7 @@
                     <div class="home-row">
                         <!-- ===== Home link Start ===== -->
                         <div class="marquee-item" style="visibility: hidden;">
-                            <a>
                             <div id="marquee"></div>
-                            </a>
                         </div>
                         <!-- ===== Home link End ===== -->
                     </div>
@@ -77,7 +75,7 @@
                     <div id="pattern"></div>
               
                     <audio id="audio" loop="">
-                      <source src="" type="audio/mp4" />
+                      <source src="assets/others/background-item.mp4" type="audio/mp4" />
                       <script>
                         const audio = document.getElementById('audio');
               
@@ -87,7 +85,7 @@
                     </audio>
               
                     <video id="background" loop="">
-                      <source src="/assets/others/background-item.mp4" type="video/mp4" />
+                      <source src="assets/others/background-item.mp4" type="video/mp4" />
                       <script>
                         const video = document.getElementById('background');
               
@@ -96,10 +94,10 @@
                       </script>
                     </video>
                   </div>
-            </sectin>
+            </section>
             <!-- ===== Home section End ===== -->
             <!-- ===== About section Start ===== -->
-            <sectin class="service section">
+            <section class="service section">
                 <div class="container">
                     <div class="home-row">
                         <div class="section-title padd-15">
@@ -107,57 +105,65 @@
                         </div>
                     </div>
                     <div class="row">
-                        <!-- ===== Service item Start ===== -->
+                        <!-- ===== 1 Service item Start ===== -->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
                                 <div class="icon">
-                                    <i class="fa fa-laptop-code"></i>
+                                    <i class="fa fa-laptop-code" id="service-icon"></i>
                                 </div>
-                                <h4>Web Design</h4>
-                                <p>The field is intended to be filled in with text
-                                </p>
+                                <div class="service-item-content">
+                                    <h4>Web Design</h4>
+                                    <p>I will create a design in any style especially for you.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <!-- ===== Service item End ===== -->
-                        <!-- ===== Service item Start ===== -->
+                        <!-- ===== 1 Service item End ===== -->
+                        <!-- ===== 2 Service item Start ===== -->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
                                 <div class="icon">
-                                    <i class="fa fa-brands fa-python"></i>
+                                    <i class="fa-solid fa-camera" id="service-icon"></i>
                                 </div>
-                                <h4>Python Dev.</h4>
-                                <p>The field is intended to be filled in with text
-                                </p>
+                                <div class="service-item-content">
+                                    <h4>Shooting</h4>
+                                    <p>We will make professional shots specifically for your project or just for the soul.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <!-- ===== Service item End ===== -->
-                        <!-- ===== Service item Start ===== -->
+                        <!-- ===== 2 Service item End ===== -->
+                        <!-- ===== 3 Service item Start ===== -->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
                                 <div class="icon">
-                                    <i class="fa fa-file-word"></i>
+                                    <i class="fa fa-file-word" id="service-icon"></i>
                                 </div>
-                                <h4>Laboratory</h4>
-                                <p>The field is intended to be filled in with text
-                                </p>
+                               <div class="service-item-content">
+                                   <h4>SMM</h4>
+                                   <p>We will help your project to get the maximum audience coverage.
+                                   </p>
+                               </div>
                             </div>
                         </div>
-                        <!-- ===== Service item End ===== -->
-                        <!-- ===== Service item Start ===== -->
+                        <!-- ===== 3 Service item End ===== -->
+                        <!-- ===== 4 Service item Start ===== -->
                         <div class="service-item padd-15">
                             <div class="service-item-inner">
                                 <div class="icon">
-                                    <i class="fa fa-fire-flame-curved"></i>
+                                    <i class="fa fa-fire-flame-curved" id="service-icon"></i>
                                 </div>
-                                <h4>Boost</h4>
-                                <p>The field is intended to be filled in with text
-                                </p>
+                               <div class="service-item-content">
+                                   <h4>Development assistance</h4>
+                                   <p>We will fix and optimize your code.
+                                   </p>
+                               </div>
                             </div>
                         </div>
-                        <!-- ===== Service item End ===== -->
+                        <!-- ===== 4 Service item End ===== -->
                     </div>
                 </div>
-            </sectin>
+            </section>
             <!-- ===== About section End ===== -->
             <!-- ===== Style Switcher Start ===== -->
             <div class="style-switcher">
@@ -180,7 +186,7 @@
         <!-- ===== Main Content End ===== -->
         <!-- ===== Footer section Start ===== -->
         <div class="footer" id="f-id" style="visibility: visible;">
-            <i><a href="https://discord.gg/PbqDrantsN" target="_BLANK">TRIBAR Squad</a></i>
+            <i><a href="https://discord.gg/PbqDrantsN" target="_BLANK">Connect TRIBAR Squad</a></i>
         </div>
         <!-- ===== Footer section End ===== -->
     </div>
@@ -193,5 +199,6 @@
     <script type="text/javascript" src="assets/js/porfolio.js"></script>
     <script type="text/javascript" src="assets/js/style-switcher.js"></script>
     <script class="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <script src="https://kit.fontawesome.com/7285c935da.js" crossorigin="anonymous"></script>
 </body>
 </html>

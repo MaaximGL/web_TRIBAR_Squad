@@ -18,6 +18,14 @@
     transform: translateX(-25px);
 }
 
+.style-switcher .s-icon .fas{
+    transition: 0.3s all;
+}
+
+.style-switcher .s-icon.active .fas{
+    transform: rotate(180deg);
+}
+
 .style-switcher .s-icon
 {
     position: absolute;
@@ -54,6 +62,8 @@
 {
     margin: 0 0 10px;
     color: var(--text-black-100);
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
     font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;

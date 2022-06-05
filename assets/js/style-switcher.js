@@ -18,25 +18,26 @@ function setActiveStyle(color)
     })
 }
 
-const switcherPages = document.querySelector('.switcher-pages');
-const home = document.querySelector('.home');
-const footer = document.querySelector('.footer');
-let condition = true; 
+const switcherPages = document.querySelector('.switcher-pages'),
+    home = document.querySelector('.home'),
+    footer = document.querySelector('.footer'),
+    homeVideoBlock = home.querySelector('video'),
+    homeSoundsBlock = home.querySelector('audio')
+let condition = true;
 
 switcherPages.addEventListener('click', () => {
-    if (condition) 
-    { 
-        switcherPages.classList.toggle('active');
-        home.classList.toggle('active');
-        footer.style.visibility = 'hidden';
-     condition = false; 
-    } else
-    { 
-        switcherPages.classList.toggle('active');
-        home.classList.toggle('active');
-        footer.style.visibility = 'visible';
-     condition = true; 
-    } 
+
+    switcherPages.classList.toggle('active');
+    home.classList.toggle('active');
+
+    home.classList.contains('active') ? footer.style.visibility = 'hidden' : footer.style.visibility = 'visible';
+
+    if(homeVideoBlock){
+        home.classList.contains('active') ? homeVideoBlock.pause() : homeVideoBlock.play()
+    }
+    if(homeSoundsBlock){
+        home.classList.contains('active') ? homeSoundsBlock.pause() : homeSoundsBlock.play()
+    }
 });
 
 
